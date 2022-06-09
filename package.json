@@ -1,0 +1,26 @@
+{
+	"name": "@bletchley-tech/mysqlify",
+	"version": "0.0.0",
+	"description": "A Promise-based Node.js wrapper for mysqljs/mysql",
+	"main": "Connection.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BletchleyTech/mysqlify.git"
+	},
+	"keywords": [
+		"mysql",
+		"promise",
+		"database",
+		"sql",
+		"rdbms"
+	],
+	"author": "Bletchley Technological Solutions Inc.",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/BletchleyTech/mysqlify/issues"
+	},
+	"homepage": "https://github.com/BletchleyTech/mysqlify#readme",
+	"dependencies": {
+		"mysql": "^2.18.1"
+	}
+}
