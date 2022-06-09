@@ -70,9 +70,6 @@ class MySQLConnection {
             });
         });
     }
-    destroy() {
-        return this.#connection.destroy(); // end the connection aggresively
-    }
 };
 
 module.exports = MySQLConnection;

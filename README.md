@@ -150,16 +150,6 @@ connection.close()
 
 Same as with the `ping()` method, if the promise resolves, there will be no return value. If the promise rejects, the rejection will be an Error object.
 
-#### *destroy()*
-
-The `destroy()` method is simple a wrapper for the mysql `destroy()` method, created to make the functionality available to the MySQLConnection object.
-
-```javascript
-connection.destroy();
-```
-
-This method returns the result of the mysql `destroy()` method.
-
 ## **License**
 
 MySQLify is licensed under the MIT license (see the [LICENSE](LICENSE) for more information).
