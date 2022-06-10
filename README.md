@@ -64,6 +64,30 @@ const connection = new MySQLConnection({
 const connection = new MySQLConnection('mysql://root:password@localhost/my_database');
 ```
 
+### **Class Attributes**
+
+#### *host*
+
+The hostname of the MySQL instance (e.g. localhost).
+
+#### *currentUser*
+
+The current user of the connection.
+
+This attribute is updated when the changeConnection method is called with the `user` property.
+
+#### *currentDatabase*
+
+The current database being accessed by the connection.
+
+This attribute is updated when the changeConnection method is called with the `database` property.
+
+#### *connectionId*
+
+The ID of the connection.
+
+This is the same as the `threadId` attribute from the [mysql](https://www.npmjs.com/package/mysql) package. See more [here](https://www.npmjs.com/package/mysql#getting-the-connection-id).
+
 ### **Class Methods**
 
 #### *connect()*
@@ -133,6 +157,29 @@ connection.ping()
 ```
 
 If the promise resolves, there will be no return value. If the promise rejects, the rejection will be an Error object.
+
+#### *changeConnection(changeOptions)*
+
+The `changeConnection()` method is used to change the connection settings of the MySQLConnection instance. This method takes a single parameter, which is an object containing the new connection settings. 
+
+It will return a Promise that resolves if the connection settings are successfully changed, or rejects if the connection settings are not successfully changed.
+
+```javascript
+connection.changeConnection({
+	user: 'newUser',
+	password: 'newUserPassword',
+	charset: 'newCharset',
+	database: 'newDatabase'
+})
+.then(() => {
+	// connection settings have been changed
+})
+.catch(err => {
+	// connection settings could not be changed
+});
+```
+
+Same as with the `ping()` method, if the promise resolves, there will be no return value. If the promise rejects, the rejection will be an Error object.
 
 #### *close()*
 
