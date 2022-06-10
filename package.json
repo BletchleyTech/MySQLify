@@ -22,5 +22,8 @@
 	"homepage": "https://github.com/BletchleyTech/mysqlify#readme",
 	"dependencies": {
 		"mysql": "^2.18.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.17.0"
 	}
 }
