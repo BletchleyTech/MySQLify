@@ -1,6 +1,6 @@
 {
 	"name": "@bletchley-tech/mysqlify",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "A Promise-based Node.js wrapper for mysqljs/mysql",
 	"main": "MySQLConnection.js",
 	"repository": {
