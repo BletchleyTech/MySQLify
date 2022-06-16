@@ -88,6 +88,10 @@ The ID of the connection.
 
 This is the same as the `threadId` attribute from the [mysql](https://www.npmjs.com/package/mysql) package. See more [here](https://www.npmjs.com/package/mysql#getting-the-connection-id).
 
+#### *config*
+
+The current configuration of the connection. This will return an object containing the host, user, database, and connectionId of the connection.
+
 ### **Class Methods**
 
 #### *connect()*
