@@ -29,6 +29,14 @@ class MySQLConnection {
 	get connectionId() {
 		return this.#connection.threadId;
 	}
+	get config() {
+		return {
+			host: this.#host,
+			user: this.#user,
+			database: this.#database,
+			connectionId: this.connectionId
+		};
+	}
 	connect() {
 		return new Promise((resolve, reject) => {
 			this.#connection.connect((err) => {
@@ -80,7 +88,7 @@ class MySQLConnection {
 	changeConnection(changeOptions) {
 		return new Promise((resolve, reject) => {
 			this.#connection.changeUser(changeOptions, (err) => {
-				// change the user
+				// change the connection settings
 				if (err) {
 					reject(err);
 				} else {
